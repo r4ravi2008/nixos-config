@@ -17,6 +17,7 @@
       poetry
       vscode
       shell_gpt
+      wmctrl
     ];
 
     programs.direnv = {
@@ -31,8 +32,14 @@
       # fishIntegrationPath = "/Users/rkommineni/.config/fish/conf.d/direnv.fish";
     };
 
+    services.sxhkd= {
+      enable = true;
+      keybindings = {
+      "super + Return" = "kitty";
+      };
+    };
 
-    home.stateVersion = "22.05";
+    home.stateVersion = "23.11";
     programs.emacs = {
           enable = true;
           extraPackages = epkgs: [ epkgs.pdf-tools epkgs.org-pdftools ]; # non-trivial
