@@ -77,6 +77,16 @@
     pulse.enable = true;
   };
 
+  services.logind.extraConfig = ''
+                              HandleSuspendKey=ignore
+                              HandleHibernateKey=ignore
+                              HandleLidSwitch=ignore
+                              HandleLidSwitchExternalPower=ignore
+                              HandleLidSwitchDocked=ignore
+                              IdleAction=ignore
+                              IdleActionSec=0
+                              '';
+
   users.users.rskom = {
     isNormalUser = true;
     description = "rskom";
