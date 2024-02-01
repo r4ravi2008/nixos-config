@@ -97,6 +97,7 @@
     firefox
     vim
     google-chrome
+    openvpn
   ];
 
   system.stateVersion = "23.11";
