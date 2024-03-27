@@ -47,6 +47,7 @@
 
   # Enable the KDE Plasma Desktop Environment.
   services.xserver.displayManager.sddm.enable = true;
+  services.xserver.xautolock.time = 1200;
   services.xserver.desktopManager.plasma5.enable = true;
   services.xserver.videoDrivers = [ "nvidia" ];
 
@@ -77,15 +78,16 @@
     pulse.enable = true;
   };
 
-  services.xserver.xautolock.time = 120;
 
   users.users.rskom = {
     isNormalUser = true;
     description = "rskom";
     extraGroups = [ "networkmanager" "wheel" ];
+    shell = pkgs.zsh;
     packages = with pkgs; [
     ];
   };
+  programs.zsh.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true; 
@@ -98,6 +100,11 @@
     vim
     google-chrome
     openvpn
+    wget
+    unzip
+    python310
+    python310Packages.pip
+    gcc-unwrapped
   ];
 
   system.stateVersion = "23.11";

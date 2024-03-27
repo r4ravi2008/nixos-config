@@ -18,6 +18,7 @@
       vscode
       shell_gpt
       wmctrl
+      qbittorrent
     ];
 
     programs.direnv = {
