@@ -13,7 +13,7 @@
     ./hyprland.nix
   ];
 
-  networking.hostName = "rk";
+  networking.hostName = "aira";
   time.timeZone = "America/Los_Angeles";
   i18n.defaultLocale = "en_US.UTF-8";
 
@@ -24,9 +24,9 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  users.users.r4ravi2008 = {
+  users.users.aira = {
     isNormalUser = true;
-    description = "r4ravi2008";
+    description = "aira";
     extraGroups = [
       "wheel"
       "networkmanager"

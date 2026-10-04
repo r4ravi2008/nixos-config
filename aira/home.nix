@@ -5,8 +5,8 @@
   ...
 }:
 {
-  home.username = "r4ravi2008";
-  home.homeDirectory = "/home/r4ravi2008";
+  home.username = "aira";
+  home.homeDirectory = "/home/aira";
   home.stateVersion = "25.11";
 
   home.packages = with pkgs; [

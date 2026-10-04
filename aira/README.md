@@ -33,8 +33,8 @@ distrobox enter ubuntu
 1. Boot the NixOS graphical installer. Do not format `E:` if you still want the Homebridge copy and the wedding videos.
 2. `sudo nixos-generate-config --root /mnt`
 3. Copy this directory to `/mnt/etc/nixos`, and replace `hardware-configuration.nix` with the generated file. Keep the generated `fileSystems` and boot loader settings.
-4. Confirm the username in `flake.nix` matches the user you created.
-5. `sudo nixos-rebuild switch --flake /mnt/etc/nixos#rk`
+4. The host and user are both `aira`.
+5. `sudo nixos-rebuild switch --flake github:r4ravi2008/nixos-config#aira`
 
 On first login, Herdr plugins and skills are not applied yet. The static links are. Run:
 
